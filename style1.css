@@ -1,0 +1,535 @@
+/*1 - 1 рядок, 2 машини
+2 - 2 рядка, 5 машин
+3 - 2 рядка, 4 машини
+4 - 2 рядка, 4 машини
+5 - 1 рядок, 2 машини
+6 - 1 рядок, 1 машина
+7 - 1 рядок, 2 машини
+8 - 2 рядка, 6 машин
+9 - 7 рядків, 19 машин
+*/
+
+
+    /*$gray_color: #DEDEDE;*/
+
+
+html
+{
+    box-sizing: border-box;
+}
+*, *:before, *after
+{
+    box-sizing: inherit;
+}
+body
+{
+	font-family: 'Russo One', sans-serif;
+    margin: 0;
+    background-color: #4D4D4D;
+    color: white;
+	
+}
+
+.flex-nav img
+{
+    width: 64px;
+    height: 64px;
+    padding-right: 20px;
+}
+
+.flex-nav a
+{
+    /*background: rgba(0, 0, 0, 0.1);*/
+    color: #4D4D4D;   
+    /*color: #4D4D4D;*/
+    text-decoration: none;
+    /*padding: 20px 5px;*/
+    width: 100%;
+    text-align: center;
+    font-weight: 100;/*вага-жирність шоифту*/
+    letter-spacing: 2px;/*відстань між літерами*/
+    font-size: x-large;
+}
+.flex-nav a:hover
+{
+    color: white;
+}
+
+.flex-nav i
+{
+    color: #4D4D4D;
+}
+
+.wrapper
+{
+    /*max-width: 1200px;
+    margin: 0 auto;*/
+   /* padding: 50px;*/
+   margin-left: 5%;
+   margin-right: 5%;
+   margin-top: 10px;
+}
+
+.flex-nav ul
+{
+    background: #DEDEDE;
+    display: flex;
+    list-style: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    padding: 10px 20px;
+    /*justify-content: space-around;*/
+}
+.flex-nav .links
+{
+    /*padding-right: 7%;*/
+   flex-grow: 5;
+}
+.flex-nav .social
+{
+    flex-grow: 1;
+    font-size: x-large;
+
+   margin-left: 40px;/*//////////////*/
+   /*align-self: flex-end;*/
+   /*align-content: flex-end;*/
+}
+.flex-nav .lupa
+{
+    flex-grow: 0;
+    font-size: x-large;
+}
+
+
+.BMWcatalog
+{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-gap: 10px;
+    background-color: #DEDEDE;
+    border: 1px solid black;
+    border-radius: 10px;
+   /* margin: 20px;*/
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.BMWcatalog1
+{
+ grid-template-rows: repeat(1, 1fr);
+}
+
+.BMWcatalog2
+{
+ grid-template-rows: repeat(2, 1fr);
+}
+
+.BMWcatalog3
+{
+ grid-template-rows: repeat(2, 1fr);
+}
+
+.BMWcatalog4
+{
+ grid-template-rows: repeat(2, 1fr);
+}
+
+.BMWcatalog5
+{
+ grid-template-rows: repeat(1, 1fr);
+}
+
+.BMWcatalog6
+{
+ grid-template-rows: repeat(1, 1fr);
+}
+
+.BMWcatalog7
+{
+ grid-template-rows: repeat(1, 1fr);
+}
+
+.BMWcatalog8
+{
+ grid-template-rows: repeat(2, 1fr);
+}
+
+#one, #two, #three, #four, #five, #six, #seven, #eight
+ {
+   margin-left: 20px;
+ }
+
+.modelcar
+{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.modelcar img
+{
+  width: 100%;
+}
+
+.modelcar h2
+{
+    font-size: 20px;
+    color: #4D4D4D;
+}
+
+.modelcar h3
+{
+    font-size: 15px;
+    color: #4D4D4D;
+}
+
+.new 
+{
+   
+    background-color: #4D4D4D;
+    border-radius: 10px;
+    position: relative;   
+}
+.new .newTitle
+{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    background-color: #DEDEDE;
+    padding: 3px;
+    border-radius: 5px;
+    color: #4D4D4D;
+}
+.new h2, .new h3
+{
+    color: white; 
+}
+
+.modelcar a img:hover
+{
+    /*opacity: 1.0; - задає рівень прозорості для елемента, 
+    таким чином, щоб він став напівпрозорим, або навіть невидимим*/
+    transition: 0.5s;
+    transform: scale(1.2);
+
+}
+
+.modelcar a img
+{
+    /*opacity: 0.5;*/
+    transition: 0.5s;
+   
+
+}
+
+.numers 
+{
+    display: flex;
+    align-items: center;
+
+}
+.numers a
+{
+    text-decoration: none;
+    color: white;
+    padding: 0 20px;
+    border-bottom: 3px solid  #4D4D4D;
+     /*margin-left: 5px;*/
+    transition: 0.5s;
+}
+.numers a:hover /*умова при наведені курсору миші*/
+{
+    border-bottom: 3px solid white;
+}
+.numers a:before
+{
+   transition: 0.5s;
+}
+.numers a h1
+{
+    text-align: center;
+}
+
+hr 
+{
+    margin: 0;
+}
+
+.AAA
+{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+footer
+{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    background-color: #DEDEDE;
+    grid-gap: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0px;
+    justify-content: center;
+    /*align-self: center;*/
+}
+
+footer h2
+{
+    margin-left: 0;
+}
+
+.grid1, .grid2, .grid3
+{
+    justify-self: center;
+    align-self: start;
+    /*border: 2px solid black;*/
+    text-align: center;
+}
+
+.grid1 a, .grid2 a, .grid3 a
+{
+    color: #4D4D4D;
+    text-decoration: none;
+}
+
+.grid1 a:hover, .grid2 a:hover, .grid3 a:hover
+{
+   color: rgba(77, 77, 77, 0.5);
+}
+
+
+
+@media all and (max-width: 1000px)
+{
+    body
+    {
+      /*  background-color: green;*/
+    }
+    .flex-nav ul
+    {
+        flex-wrap: wrap;
+
+    }
+    .flex-nav .links
+    {
+        flex: 1 1 100%;
+        align-self: center;
+    }
+    .flex-nav #iconlupa
+    {
+        padding-right: 40%;
+        align-self: center;
+    }
+    .flex-nav .social
+    {
+        flex: 1 1 25%;
+        align-self: center;
+        padding-left: 0;
+    }
+    /*.flex-nav .lupa
+    {
+        flex-basis: 50%;
+    }*/
+
+    .BMWcatalog
+    {
+    
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+    .new h2, 
+    {
+    font-size: minmax(15px);
+    }
+    .new h3, 
+    {
+    font-size: minmax(10px);
+    }
+    footer
+    {
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+    }
+
+
+}
+
+@media all and (max-width: 600px)
+{
+    body
+    {
+       /* background-color: red;*/
+    }
+    .BMWcatalog
+    {
+    
+    grid-template-columns: repeat(1, minmax(100px, 1fr));
+    }
+    
+    .new h2, 
+    {
+    font-size: minmax(10px);
+    }
+    .new h3, 
+    {
+    font-size: minmax(5px);
+    }
+}
+
+/* Стилі для кнопки "Повернутися вгору" */
+#scrollToTopButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 10px;
+    background-color: #DEDEDE;
+    color: #4D4D4D;
+    font-size: 20px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 1;
+
+}
+
+#scrollToTopButton:hover {
+    background-color: #0056b3;
+}
+
+
+
+/*
+lives = 10
+color = #4D4D4D
+
+gray_color = white
+darkgray_color
+
+name - lives
+type - number
+value - 10
+
+
+*/
+
+.details
+{
+    position: fixed;
+    width: 80vw;/*vw - відносно width*/
+    height: 100vh;/*vh - відносно height*/
+    background-color: #BBCCDB;
+    /*border: 2px solid black;*/
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+    display: none;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+    /*polygon(лівий верхній кут, правий верхній кут, правий нижній кут, ливій нижній кут);*/
+}
+
+.line
+{
+    width: 80vw;
+    height: 100vh;
+    position: absolute;
+}
+.line1
+{
+    clip-path: polygon(10% 0, 13% 0, 3% 100%, 0 100%);
+    background-color: #0A5FAC;
+}
+.line2
+{
+    clip-path: polygon(10% 0, 13% 0, 3% 100%, 0 100%);
+    background-color: #013976;
+    left: 3%;
+}
+.line3
+{
+    clip-path: polygon(10% 0, 13% 0, 3% 100%, 0 100%);
+    background-color: #E5230E;
+    left: 6%;
+}
+
+.details_content img
+{
+    transform: scale(0.9);
+    padding: 0px;
+    position: relative;
+    top: 5vh;
+    right: 16%;
+}
+
+.details_content h2
+{
+    font-size: xx-large; 
+    margin: 0px; 
+}
+
+.details_content h4
+{
+    font-size: 24px; 
+    margin: 0px; 
+}
+
+.details_content p
+{
+    font-size: 18px;  
+    text-align: left;
+}
+
+.details_content
+{
+    width: 50vw;
+    position: absolute;
+    left: 20%;
+    bottom: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    margin: 0px;
+}
+
+.close
+{
+   position: absolute;
+   top: 5vh;
+   right: 5vh;
+   font-size: xx-large;
+   text-decoration: none;
+   color: #4D4D4D;
+}
+
+.learn_more
+{
+    border: 5px solid #013976;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: large;
+    align-self: center;
+    margin-top: 10px;
+}
+.learn_more a
+{
+    color: #4D4D4D;
+    text-decoration: none;
+}
+
+.learn_more:hover
+{
+    background-color: #DEDEDE;
+}
+
